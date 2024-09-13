@@ -8,5 +8,10 @@ description = "Rewrite Android recipes."
 val rewriteVersion = rewriteRecipe.rewriteVersion.get()
 dependencies {
     implementation(platform("org.openrewrite:rewrite-bom:$rewriteVersion"))
-    implementation("org.openrewrite:rewrite-core:$rewriteVersion")
+    implementation("org.openrewrite:rewrite-gradle:$rewriteVersion")
+
+    runtimeOnly("org.openrewrite:rewrite-java-17")
+
+    testImplementation("org.openrewrite.gradle.tooling:model:${rewriteVersion}")
+    testImplementation(gradleApi())
 }
