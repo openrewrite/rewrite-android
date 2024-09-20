@@ -38,52 +38,52 @@ class ChangeAndroidSdkVersionTest implements RewriteTest {
           //language=gradle
           buildGradle(
             """
-                buildscript {
-                    repositories {
-                        mavenCentral()
-                        google()
-                    }
-                    dependencies {
-                        classpath 'com.android.tools.build:gradle:8.6.1'
-                    }
-                }
-                repositories {
-                    mavenCentral()
-                }
-                apply plugin: 'com.android.application'
-                group = "org.example"
-                version = "1.0-SNAPSHOT"
-                android {
-                   compileSdk 28
-                   defaultConfig {
-                       targetSdk 28
-                   }
-                   namespace = "com.example.myapp"
-                }
+              buildscript {
+                  repositories {
+                      mavenCentral()
+                      google()
+                  }
+                  dependencies {
+                      classpath 'com.android.tools.build:gradle:8.6.1'
+                  }
+              }
+              repositories {
+                  mavenCentral()
+              }
+              apply plugin: 'com.android.application'
+              group = "org.example"
+              version = "1.0-SNAPSHOT"
+              android {
+                 compileSdk 28
+                 defaultConfig {
+                     targetSdk 28
+                 }
+                 namespace = "com.example.myapp"
+              }
               """,
             """
-                buildscript {
-                    repositories {
-                        mavenCentral()
-                        google()
-                    }
-                    dependencies {
-                        classpath 'com.android.tools.build:gradle:8.6.1'
-                    }
-                }
-                repositories {
-                    mavenCentral()
-                }
-                apply plugin: 'com.android.application'
-                group = "org.example"
-                version = "1.0-SNAPSHOT"
-                android {
-                   compileSdk 35
-                   defaultConfig {
-                       targetSdk 35
-                   }
-                   namespace = "com.example.myapp"
-                }
+              buildscript {
+                  repositories {
+                      mavenCentral()
+                      google()
+                  }
+                  dependencies {
+                      classpath 'com.android.tools.build:gradle:8.6.1'
+                  }
+              }
+              repositories {
+                  mavenCentral()
+              }
+              apply plugin: 'com.android.application'
+              group = "org.example"
+              version = "1.0-SNAPSHOT"
+              android {
+                 compileSdk 35
+                 defaultConfig {
+                     targetSdk 35
+                 }
+                 namespace = "com.example.myapp"
+              }
               """
           )
         );
@@ -95,50 +95,50 @@ class ChangeAndroidSdkVersionTest implements RewriteTest {
           //language=gradle
           buildGradle(
             """
-                buildscript {
-                    repositories {
-                        mavenCentral()
-                        google()
-                    }
-                    dependencies {
-                        classpath 'com.android.tools.build:gradle:4.1.3'
-                    }
-                }
-                repositories {
-                    mavenCentral()
-                }
-                apply plugin: 'com.android.application'
-                group = "org.example"
-                version = "1.0-SNAPSHOT"
-                android {
-                   compileSdkVersion 28
-                   defaultConfig {
-                       targetSdkVersion 28
-                   }
-                }
+              buildscript {
+                  repositories {
+                      mavenCentral()
+                      google()
+                  }
+                  dependencies {
+                      classpath 'com.android.tools.build:gradle:4.1.3'
+                  }
+              }
+              repositories {
+                  mavenCentral()
+              }
+              apply plugin: 'com.android.application'
+              group = "org.example"
+              version = "1.0-SNAPSHOT"
+              android {
+                 compileSdkVersion 28
+                 defaultConfig {
+                     targetSdkVersion 28
+                 }
+              }
               """,
             """
-                buildscript {
-                    repositories {
-                        mavenCentral()
-                        google()
-                    }
-                    dependencies {
-                        classpath 'com.android.tools.build:gradle:4.1.3'
-                    }
-                }
-                repositories {
-                    mavenCentral()
-                }
-                apply plugin: 'com.android.application'
-                group = "org.example"
-                version = "1.0-SNAPSHOT"
-                android {
-                   compileSdkVersion "35"
-                   defaultConfig {
-                       targetSdkVersion "35"
-                   }
-                }
+              buildscript {
+                  repositories {
+                      mavenCentral()
+                      google()
+                  }
+                  dependencies {
+                      classpath 'com.android.tools.build:gradle:4.1.3'
+                  }
+              }
+              repositories {
+                  mavenCentral()
+              }
+              apply plugin: 'com.android.application'
+              group = "org.example"
+              version = "1.0-SNAPSHOT"
+              android {
+                 compileSdkVersion "35"
+                 defaultConfig {
+                     targetSdkVersion "35"
+                 }
+              }
               """
           )
         );
