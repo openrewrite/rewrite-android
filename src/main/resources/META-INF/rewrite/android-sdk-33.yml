@@ -18,4 +18,6 @@ type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.android.UpgradeToAndroidSDK33
 displayName: Upgrade to Android SDK 33
 description: Recipes to upgrade to Android SDK version 33.
-recipeList: []
+recipeList:
+  - org.openrewrite.android.ChangeAndroidSdkVersion:
+      version: 33
