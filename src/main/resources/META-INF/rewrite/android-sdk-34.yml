@@ -20,3 +20,5 @@ displayName: Upgrade to Android SDK 34
 description: Recipes to upgrade to Android SDK version 34.
 recipeList:
   - org.openrewrite.android.UpgradeToAndroidSDK33
+  - org.openrewrite.android.ChangeAndroidSdkVersion:
+      version: 34
