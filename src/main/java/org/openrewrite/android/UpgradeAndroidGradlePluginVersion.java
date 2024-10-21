@@ -40,13 +40,6 @@ public class UpgradeAndroidGradlePluginVersion extends Recipe {
     String gradleWrapperVersion;
 
     @Override
-    public List<Recipe> getRecipeList() {
-        return Arrays.asList(
-                new UpgradeDependencyVersion("com.android.tools.build", "gradle", agpVersion, null),
-                new UpdateGradleWrapper(gradleWrapperVersion, null, null, null, null));
-    }
-
-    @Override
     public String getDisplayName() {
         return "Upgrade Android Gradle Plugin (AGP) version";
     }
@@ -54,5 +47,12 @@ public class UpgradeAndroidGradlePluginVersion extends Recipe {
     @Override
     public String getDescription() {
         return "Upgrade Android Gradle Plugin (AGP) version and update the Gradle Wrapper version. Compatible versions are published in the [AGP release notes](https://developer.android.com/build/releases/gradle-plugin).";
+    }
+
+    @Override
+    public List<Recipe> getRecipeList() {
+        return Arrays.asList(
+                new UpgradeDependencyVersion("com.android.tools.build", "gradle", agpVersion, null),
+                new UpdateGradleWrapper(gradleWrapperVersion, null, null, null, null));
     }
 }
