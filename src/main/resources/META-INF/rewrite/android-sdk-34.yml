@@ -20,5 +20,9 @@ displayName: Upgrade to Android SDK 34
 description: Recipes to upgrade to Android SDK version 34.
 recipeList:
   - org.openrewrite.android.UpgradeToAndroidSDK33
+  - org.openrewrite.android.MigrateToAndroidGradlePlugin_8_1
+  - org.openrewrite.android.UpgradeAndroidGradlePluginVersion: # API 34 requires AGP 8.1.1 and up specifically
+      agpVersion: '[8.1.1, 8.2)'
+      gradleWrapperVersion: '[8.0, 9)'
   - org.openrewrite.android.ChangeAndroidSdkVersion:
       version: 34

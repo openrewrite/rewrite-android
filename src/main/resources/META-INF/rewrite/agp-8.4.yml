@@ -15,11 +15,11 @@
 #
 ---
 type: specs.openrewrite.org/v1beta/recipe
-name: org.openrewrite.android.UpgradeToAndroidSDK35
-displayName: Upgrade to Android SDK 35
-description: Recipes to upgrade to Android SDK version 35.
+name: org.openrewrite.android.MigrateToAndroidGradlePlugin_8_4
+displayName: Migrate to Android Gradle Plugin 8.4
+description: Recipes to migrate to Android Gradle Plugin version 8.4.
 recipeList:
-  - org.openrewrite.android.UpgradeToAndroidSDK34
-  - org.openrewrite.android.MigrateToAndroidGradlePlugin_8_6
-  - org.openrewrite.android.ChangeAndroidSdkVersion:
-      version: 35
+  - name: org.openrewrite.android.MigrateToAndroidGradlePlugin_8_3
+  - org.openrewrite.android.UpgradeAndroidGradlePluginVersion:
+      agpVersion: 8.4.x
+      gradleWrapperVersion: '[8.6, 9)'
